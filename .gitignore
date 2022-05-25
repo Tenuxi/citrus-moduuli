@@ -40,8 +40,8 @@
 .htaccess
 .ht.router.php
 autoload.php
-composer.json
-composer.lock
+# composer.json
+# composer.lock
 example.gitignore
 index.php
 INSTALL.txt
