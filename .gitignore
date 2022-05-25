@@ -25,6 +25,7 @@
 /vendor
 /core
 /modules/README.txt
+/modules/contrib
 /profiles/README.txt
 /sites/development.services.yml
 /sites/example.settings.local.php
@@ -60,3 +61,6 @@ web.config
 /drush
 /drupal.phar
 /drupal
+
+
+.user.ini
