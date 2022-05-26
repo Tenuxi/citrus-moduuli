@@ -1,0 +1,32 @@
+catdaycare.admin:
+  title: 'Cat daycare'
+  route_name: catdaycare.admin
+  parent: system.admin_structure
+
+# Daycare menu items definition
+entity.daycare.collection:
+  title: 'Daycare list'
+  route_name: entity.daycare.collection
+  description: 'List Daycare entities'
+  parent: catdaycare.admin
+  weight: 100
+
+daycare.settings:
+  title: 'Daycare settings'
+  description: 'Configure Daycare entities'
+  route_name: daycare.settings
+  parent: catdaycare.admin
+
+# Cat menu items definition
+entity.cat.collection:
+  title: 'Cat list'
+  route_name: entity.cat.collection
+  description: 'List Cat entities'
+  parent: system.admin_structure
+  weight: 100
+
+cat.admin.structure.settings:
+  title: 'Cat settings'
+  description: 'Configure Cat entities'
+  route_name: cat.settings
+  parent: catdaycare.admin

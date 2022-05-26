@@ -1,0 +1,7 @@
+name: 'Citrus Catdaycare'
+type: module
+description: 'Citrus Cat Daycare'
+core_version_requirement: 9.x
+package: 'Citrus'
+dependencies:
+  - datetime

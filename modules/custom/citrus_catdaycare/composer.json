@@ -1,0 +1,13 @@
+{
+    "name": "citrus_catdaycare",
+    "type": "drupal-module",
+    "description": "Citrus Cat Daycare",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/citrus_catdaycare",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/citrus_catdaycare",
+        "source": "http://cgit.drupalcode.org/citrus_catdaycare",
+    },
+}

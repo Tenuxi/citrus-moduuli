@@ -1,0 +1,60 @@
+add daycare entities:
+  title: 'Create new Daycare entities'
+
+administer daycare entities:
+  title: 'Administer Daycare entities'
+  description: 'Allow to access the administration form to configure Daycare entities.'
+  restrict access: true
+
+delete daycare entities:
+  title: 'Delete Daycare entities'
+
+edit daycare entities:
+  title: 'Edit Daycare entities'
+
+view published daycare entities:
+  title: 'View published Daycare entities'
+
+view unpublished daycare entities:
+  title: 'View unpublished Daycare entities'
+
+add cat entities:
+  title: 'Create new Cat entities'
+
+administer cat entities:
+  title: 'Administer Cat entities'
+  description: 'Allow to access the administration form to configure Cat entities.'
+  restrict access: true
+
+delete cat entities:
+  title: 'Delete Cat entities'
+
+edit cat entities:
+  title: 'Edit Cat entities'
+
+view published cat entities:
+  title: 'View published Cat entities'
+
+view unpublished cat entities:
+  title: 'View unpublished Cat entities'
+
+add cat daycare entities:
+  title: 'Create new Cat daycare entities'
+
+administer cat daycare entities:
+  title: 'Administer Cat daycare entities'
+  description: 'Allow to access the administration form to configure Cat daycare entities.'
+  restrict access: true
+
+delete cat daycare entities:
+  title: 'Delete Cat daycare entities'
+
+edit cat daycare entities:
+  title: 'Edit Cat daycare entities'
+
+view published cat daycare entities:
+  title: 'View published Cat daycare entities'
+
+view unpublished cat daycare entities:
+  title: 'View unpublished Cat daycare entities'
+

@@ -14,7 +14,8 @@
         "drupal/core-project-message": "9.0.0",
         "drupal/core-vendor-hardening": "9.0.0",
         "drupal/bootstrap": "^3.24",
-        "drupal/admin_toolbar": "^3.1"
+        "drupal/admin_toolbar": "^3.1",
+        "drush/drush": "^10.6"
     },
     "require-dev": {
         "behat/mink": "^1.8",

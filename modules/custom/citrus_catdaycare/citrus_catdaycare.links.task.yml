@@ -1,0 +1,42 @@
+# Daycare routing definition
+daycare.settings_tab:
+  route_name: daycare.settings
+  title: 'Settings'
+  base_route: daycare.settings
+
+entity.daycare.canonical:
+  route_name: entity.daycare.canonical
+  base_route: entity.daycare.canonical
+  title: 'View'
+
+entity.daycare.edit_form:
+  route_name: entity.daycare.edit_form
+  base_route: entity.daycare.canonical
+  title: 'Edit'
+
+entity.daycare.delete_form:
+  route_name:  entity.daycare.delete_form
+  base_route:  entity.daycare.canonical
+  title: Delete
+  weight: 10
+# Cat routing definition
+cat.settings_tab:
+  route_name: cat.settings
+  title: 'Settings'
+  base_route: cat.settings
+
+entity.cat.canonical:
+  route_name: entity.cat.canonical
+  base_route: entity.cat.canonical
+  title: 'View'
+
+entity.cat.edit_form:
+  route_name: entity.cat.edit_form
+  base_route: entity.cat.canonical
+  title: 'Edit'
+
+entity.cat.delete_form:
+  route_name:  entity.cat.delete_form
+  base_route:  entity.cat.canonical
+  title: Delete
+  weight: 10

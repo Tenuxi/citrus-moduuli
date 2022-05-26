@@ -1,0 +1,10 @@
+entity.daycare.add_form:
+  route_name: entity.daycare.add_form
+  title: 'Add Daycare'
+  appears_on:
+    - entity.daycare.collection
+entity.cat.add_form:
+  route_name: entity.cat.add_form
+  title: 'Add Cat'
+  appears_on:
+    - entity.cat.collection

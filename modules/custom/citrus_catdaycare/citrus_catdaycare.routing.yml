@@ -1,0 +1,14 @@
+catdaycare.admin:
+  path: '/admin/catdaycare'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Cat Day Care'
+  requirements:
+    _permission: 'access citrus cat day care administration pages'
+citrus_catdaycare.add_cat_to_daycare_form:
+  path: '/citrus_catdaycare/form/add_cat_to_daycare'
+  defaults:
+    _form: '\Drupal\citrus_catdaycare\Form\AddCatToDaycareForm'
+    _title: 'AddCatToDaycareForm'
+  requirements:
+    _access: 'TRUE'
