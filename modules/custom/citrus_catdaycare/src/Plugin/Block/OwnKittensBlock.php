@@ -71,9 +71,15 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
     $storage = $entity_typeManager->getStorage('cat');
     $daycare_storage = $entity_typeManager->getStorage('daycare');
     $kittens = $storage->loadByProperties(['user_id' => $this->currentUser->id()]);
+
+    // Koodia vähän rivitetty uudelleen koska oli todella vaikea lukuista.
+
     if (!empty($kittens)) {
+
       foreach ($kittens as $kitten) {
+
         if ($kitten instanceof CatInterface) {
+
           $render[$kitten->id()] = [
             'cat' => array(
               '#prefix' => '<div class=cat>',
@@ -81,28 +87,40 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
               '#markup' => $kitten->label(),
             ),
           ];
+
           $kittendaycares = $this->getKittenDaycare($kitten);
+
           if (isset($kittendaycares)) {
+          
             if (is_array($kittendaycares)) {
+          
               foreach ($kittendaycares as $kittendaycare) {
+          
                 if ($kittendaycare instanceof Drupal\citrus_catdaycare\Entity\CatDaycareInterface) {
+          
                   $daycare = $kittendaycare->daycare;
+
+                  // Tälle muuttujalle voisi tehdä jotain? (Tarvitseeko käyttää $kittendaycare muuttujaa montaa kertaa)
                   if (!empty($kittendaycare->daycare)) {
                     $daycare = $daycare_storage->load($kittendaycare->daycare->getValue()[0]['target_id']);
                   }
+          
                   if (!empty($kittendaycare->cat)) {
                     $cat = $storage->load($kittendaycare->cat->getValue()[0]['target_id']);
                   }
+          
                   if (!empty($kittendaycare->date)) {
                     $date = $kittendaycare->date->getValue();
                   }
                 }
+          
                 if (!empty($daycare) && !empty($cat) && !empty($date)) {
                   $render[$kitten->id()]['daycares'][] = [
                     '#type' => 'item',
                     '#markup' => sprintf('%s from date %s', $daycare->label(), $date[0]['value'])
                   ];
                 }
+          
                 else {
                   continue;
                 }
