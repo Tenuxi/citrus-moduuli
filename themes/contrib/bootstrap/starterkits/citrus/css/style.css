@@ -10,6 +10,8 @@ body {
 
 #navbar {
     background-color: #fff;
+    border: 1px solid #000;
+    box-shadow: 7px 7px 7px #131313;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active {
@@ -31,6 +33,7 @@ body {
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid #000;
+    box-shadow: 7px 7px 7px #131313;
 }
 
 .row {
