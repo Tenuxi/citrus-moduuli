@@ -57,6 +57,11 @@ body {
     display: none;
 }
 
+.col-sm-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 
 /* HELP BLOCK */
 
