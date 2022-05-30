@@ -78,62 +78,60 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
 
       foreach ($kittens as $kitten) {
 
-        //Div Jokaisen ympärille
-        echo '<div class="ownCatDaycare">'
+        // DIV JA CLASS kaiken ympärille
 
-          if ($kitten instanceof CatInterface) {
+        if ($kitten instanceof CatInterface) {
 
-            $render[$kitten->id()] = [
-              'cat' => array(
-                '#prefix' => '<div class=cat>',
-                '#suffix' => '</div>',
-                '#markup' => $kitten->label(),
-              ),
-            ];
+          $render[$kitten->id()] = [
+            'cat' => array(
+              '#prefix' => '<div class=cat>',
+              '#suffix' => '</div>',
+              '#markup' => $kitten->label(),
+            ),
+          ];
 
-            $kittendaycares = $this->getKittenDaycare($kitten);
+          $kittendaycares = $this->getKittenDaycare($kitten);
 
-            if (isset($kittendaycares)) {
-            
-              if (is_array($kittendaycares)) {
-            
-                foreach ($kittendaycares as $kittendaycare) {
-            
-                  if ($kittendaycare instanceof Drupal\citrus_catdaycare\Entity\CatDaycareInterface) {
-            
-                    $daycare = $kittendaycare->daycare;
+          if (isset($kittendaycares)) {
+          
+            if (is_array($kittendaycares)) {
+          
+              foreach ($kittendaycares as $kittendaycare) {
+          
+                if ($kittendaycare instanceof Drupal\citrus_catdaycare\Entity\CatDaycareInterface) {
+          
+                  $daycare = $kittendaycare->daycare;
 
-                    // Tälle muuttujalle voisi tehdä jotain? (Tarvitseeko käyttää $kittendaycare muuttujaa montaa kertaa)
-                    if (!empty($kittendaycare->daycare)) {
-                      $daycare = $daycare_storage->load($kittendaycare->daycare->getValue()[0]['target_id']);
-                    }
-            
-                    if (!empty($kittendaycare->cat)) {
-                      $cat = $storage->load($kittendaycare->cat->getValue()[0]['target_id']);
-                    }
-            
-                    if (!empty($kittendaycare->date)) {
-                      $date = $kittendaycare->date->getValue();
-                    }
+                  // Tälle muuttujalle voisi tehdä jotain? (Tarvitseeko käyttää $kittendaycare muuttujaa montaa kertaa)
+                  if (!empty($kittendaycare->daycare)) {
+                    $daycare = $daycare_storage->load($kittendaycare->daycare->getValue()[0]['target_id']);
                   }
-            
-                  if (!empty($daycare) && !empty($cat) && !empty($date)) {
+          
+                  if (!empty($kittendaycare->cat)) {
+                    $cat = $storage->load($kittendaycare->cat->getValue()[0]['target_id']);
+                  }
+          
+                  if (!empty($kittendaycare->date)) {
+                    $date = $kittendaycare->date->getValue();
+                  }
+                }
+          
+                if (!empty($daycare) && !empty($cat) && !empty($date)) {
 
-                    //Lisätty Div ja Class
-                    $render[$kitten->id()]['daycares'][] = [
-                      '#type' => 'item',
-                      '#markup' => sprintf('<div class="daycare"> %s from date %s </div>', $daycare->label(), $date[0]['value'])
-                    ];
-                    
-                  }
-            
-                  else {
-                    continue;
-                  }
+                  //Lisätty Div ja Class
+                  $render[$kitten->id()]['daycares'][] = [
+                    '#type' => 'item',
+                    '#markup' => sprintf('<div class="daycare"> %s from date %s </div>', $daycare->label(), $date[0]['value'])
+                  ];
+                  
+                }
+          
+                else {
+                  continue;
                 }
               }
             }
-          echo '</div>'
+          }
         }
       }
       return $render;
