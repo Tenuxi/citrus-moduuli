@@ -1,4 +1,42 @@
-/**
- * If using a CSS pre-processor, tell it to overwrite this file. If not, place
- * your custom CSS modifications here.
- */
+/* BODY */
+
+body {
+    background-color: #131313;
+}
+
+/* HEADER */
+
+
+
+/* CONTENT */
+
+.container {
+    height: 100%;
+    background-color: #fff;
+    padding-top: 3em;
+    padding-bottom: 8em;
+}
+
+.page-header {
+    display: none;
+}
+
+.block-title {
+    text-align: center;
+}
+
+.author {
+    display: none;
+}
+
+/* FORMS */
+
+#add-cat-to-daycare-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* VIEWS */
+
+
+/* FOOTER */
