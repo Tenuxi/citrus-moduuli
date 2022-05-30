@@ -116,9 +116,10 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
           
                 if (!empty($daycare) && !empty($cat) && !empty($date)) {
 
+                  //Lisätty Div ja Class
                   $render[$kitten->id()]['daycares'][] = [
                     '#type' => 'item',
-                    '#markup' => sprintf('%s from date %s', $daycare->label(), $date[0]['value'])
+                    '#markup' => sprintf('<div class="daycare"> %s from date %s </div>', $daycare->label(), $date[0]['value'])
                   ];
                   
                 }
