@@ -79,13 +79,7 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
       foreach ($kittens as $kitten) {
 
         //Div Jokaisen ympärille
-        $render[$kitten->id()] = [
-          'ownCatDaycare' = array(
-            '#prefix' => '<div class=ownCatDaycare>',
-            '#suffix' => '</div>',
-            '#markup' => $kitten->label(),
-          ),
-        
+        '<div class="ownCatDaycare">'
 
         if ($kitten instanceof CatInterface) {
 
@@ -139,7 +133,7 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
               }
             }
           }
-        ];
+        '</div>'
         }
       }
       return $render;
