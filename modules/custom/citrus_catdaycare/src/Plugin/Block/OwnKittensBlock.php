@@ -67,6 +67,7 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
    */
   protected function getOwnKittens() {
     $render = [];
+    $html = "<div class='ownCatDaycare'>" . "</div>"; //Lisätty
     $entity_typeManager = Drupal::service('entity_type.manager');
     $storage = $entity_typeManager->getStorage('cat');
     $daycare_storage = $entity_typeManager->getStorage('daycare');
@@ -81,9 +82,7 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
         // DIV JA CLASS kaiken ympärille
 
         if ($kitten instanceof CatInterface) {
-
-          // DIV class="ownCatDaycare"
-          echo '<div="class=ownCatDaycare">';
+          
           $render[$kitten->id()] = [
             'cat' => array(
               '#prefix' => '<div class=cat>',
@@ -134,7 +133,6 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
                 }
               }
             }
-          echo '</div>';
           }
         }
       }
