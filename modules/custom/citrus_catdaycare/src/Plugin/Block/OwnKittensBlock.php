@@ -79,11 +79,10 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
       foreach ($kittens as $kitten) {
 
         //Div Jokaisen ympärille
-        $render[$kitten->id()] = [
+        $render[] = [
           'ownCatDaycare' = array(
             '#prefix' => '<div class=ownCatDaycare>',
             '#suffix' => '</div>',
-            '#markup' => $kitten->label(),
           ),
         ];
 
