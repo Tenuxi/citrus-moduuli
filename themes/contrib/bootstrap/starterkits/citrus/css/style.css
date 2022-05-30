@@ -57,6 +57,16 @@ body {
     font-size: 24px;
 }
 
+#block-etusivunohje > .field {
+    background-color: #ff7b7b;
+    max-width: 1000px;
+    margin: auto;
+    border: 1px solid #191919;
+    border-radius: 3px;
+    padding: 1em;
+    box-shadow: 3px 3px 3px #131313;
+}
+
 
 /* FORMS */
 
