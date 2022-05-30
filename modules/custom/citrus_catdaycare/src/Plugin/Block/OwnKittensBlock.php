@@ -70,7 +70,7 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
     $html = "<div class='ownCatDaycare'>" . "</div>"; //Lisätty
     $date_now = time(); //Lisätty
     $date_expired = strtotime($date_now. ' -1 day'); //Lisätty
-    $date_coming = strtotime($date_now. ' + day'): //Lisätty
+    $date_coming = strtotime($date_now. ' + day'); //Lisätty
     $entity_typeManager = Drupal::service('entity_type.manager');
     $storage = $entity_typeManager->getStorage('cat');
     $daycare_storage = $entity_typeManager->getStorage('daycare');
