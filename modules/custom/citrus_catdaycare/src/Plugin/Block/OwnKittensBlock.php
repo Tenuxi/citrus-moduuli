@@ -129,7 +129,16 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
                     '#markup' => sprintf('<div class="daycare"> %s from date %s </div>', $daycare->label(), $date[0]['value'])
                   ];
                   
-                  // if lauseke joka kertoisi onko hoitopäivä mennyt vai tulevaisuudessa
+                  // if lauseke joka kertoo onko hoitopäivä mennyt vai tulevaisuudessa
+                  if ($date < $date_now) {
+                    // muuttuu väri
+                  }
+
+                  if ($date > $date_now) {
+                    // muuttuu väri
+                  }
+
+                  
                 }
           
                 else {
