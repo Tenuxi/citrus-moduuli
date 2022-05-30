@@ -84,7 +84,7 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
             '#prefix' => '<div class=ownCatDaycare>',
             '#suffix' => '</div>',
           ),
-        ];
+        
 
         if ($kitten instanceof CatInterface) {
 
@@ -138,6 +138,7 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
               }
             }
           }
+        ];
         }
       }
       return $render;
