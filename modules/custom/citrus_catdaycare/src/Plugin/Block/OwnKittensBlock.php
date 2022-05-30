@@ -80,7 +80,7 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
       foreach ($kittens as $kitten) {
 
         // DIV JA CLASS kaiken ympärille
-        print $html;
+        echo $html;
 
         if ($kitten instanceof CatInterface) {
           
