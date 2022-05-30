@@ -82,6 +82,8 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
 
         if ($kitten instanceof CatInterface) {
 
+          // DIV class="ownCatDaycare"
+          echo '<div="class=ownCatDaycare">';
           $render[$kitten->id()] = [
             'cat' => array(
               '#prefix' => '<div class=cat>',
@@ -132,6 +134,7 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
                 }
               }
             }
+          echo '</div>';
           }
         }
       }
