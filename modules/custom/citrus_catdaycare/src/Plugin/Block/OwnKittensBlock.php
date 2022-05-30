@@ -78,6 +78,15 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
 
       foreach ($kittens as $kitten) {
 
+        //Div Jokaisen ympärille
+        $render[$kitten->id()] = [
+          'ownCatDaycare' = array(
+            '#prefix' => '<div class=ownCatDaycare>',
+            '#suffix' => '</div>',
+            '#markup' => $kitten->label(),
+          ),
+        ];
+
         if ($kitten instanceof CatInterface) {
 
           $render[$kitten->id()] = [
