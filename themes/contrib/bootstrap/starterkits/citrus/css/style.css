@@ -6,15 +6,23 @@ body {
 
 /* HEADER */
 
-
+.is-active {
+    color: #000;
+    background-color: #fff;
+    font-weight: bold;
+}
 
 /* CONTENT */
 
-.container {
-    height: 100%;
+.main-container {
     background-color: #fff;
-    padding-top: 3em;
-    padding-bottom: 8em;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.row {
+    padding-top: 5em;
+    padding-bottom: 10em;
 }
 
 .page-header {
