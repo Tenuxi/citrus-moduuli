@@ -67,10 +67,6 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
    */
   protected function getOwnKittens() {
     $render = [];
-    $html = "<div class='ownCatDaycare'>" . "</div>"; //Lisätty
-    $date_now = time(); //Lisätty
-    $date_expired = strtotime($date_now. ' -1 day'); //Lisätty
-    $date_coming = strtotime($date_now. ' + day'); //Lisätty
     $entity_typeManager = Drupal::service('entity_type.manager');
     $storage = $entity_typeManager->getStorage('cat');
     $daycare_storage = $entity_typeManager->getStorage('daycare');
@@ -82,8 +78,7 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
 
       foreach ($kittens as $kitten) {
 
-        // TO DO -> DIV JA CLASS kaiken ympärille
-        // echo $html;
+        // Tähän voisi rakentaa divin ja laittaa myös classin kaiken ympärille
 
         if ($kitten instanceof CatInterface) {
           
@@ -107,7 +102,7 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
           
                   $daycare = $kittendaycare->daycare;
 
-                  // Tälle muuttujalle voisi tehdä jotain? (Tarvitseeko käyttää $kittendaycare muuttujaa montaa kertaa)
+                  // Tälle muuttujalle voisi tehdä jotain?
                   if (!empty($kittendaycare->daycare)) {
                     $daycare = $daycare_storage->load($kittendaycare->daycare->getValue()[0]['target_id']);
                   }
@@ -130,20 +125,12 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
                   ];
                   
                   // if lauseke joka kertoo onko hoitopäivä mennyt vai tulevaisuudessa
-                  if ($date < $date_now) {
-                    // muuttuu väri
-                  }
-
-                  if ($date > $date_now) {
-                    // muuttuu väri
-                  }
-
-                  
+                                    
                 }
           
-                else {
-                  continue;
-                }
+                // else {
+                //   continue;
+                // }
               }
             }
           }
