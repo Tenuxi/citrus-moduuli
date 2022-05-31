@@ -78,13 +78,17 @@ class AddCatToDaycareForm extends FormBase {
     if ($user_id = 1) {
       $query = \Drupal::database()->query('select * from cat;');
     }
+
     else {
       $query = \Drupal::database()->query('select * from cat where user_id=' . \Drupal::currentUser()->id() . ';');
     }
+
     $array = array();
+
     foreach ($query->fetchAll() as $result) {
       $array[$result->id] = $result->name;
     }
+
     return $array;
   }
 
@@ -92,9 +96,11 @@ class AddCatToDaycareForm extends FormBase {
     $array = array();
     $query = \Drupal::database()->query('select * from daycare;');
     $result = $query->execute();
+
     foreach ($query->fetchAll() as $result) {
       $array[$result->id] = $result->name;
     }
+    
     return $array;
   }
 }

@@ -127,7 +127,8 @@ class OwnKittensBlock extends BlockBase implements ContainerFactoryPluginInterfa
                   // if lauseke joka kertoo onko hoitopäivä mennyt vai tulevaisuudessa
                                     
                 }
-          
+                
+                // poistettava "else" lauseke
                 // else {
                 //   continue;
                 // }
