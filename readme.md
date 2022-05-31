@@ -1,11 +1,12 @@
+Ajatuksia:
+- Tällä hetkellä moduuli listaa vain kissat ja kissan alle hoitolan mutta käyttäjällä olisi hyvä olla mahdollisuus vaikuttaa myös siihen että voisi valita hoitolan jonka alle listaa kissat.
+- Moduuli voisi listata menneet hoidot ja kertoa koska on tulevia hoitoja kissoilla käyttäjälle.
+- Divin voisi lisätä ownKittensBlockin ympärille helpottamaan tyylittelyä
+
 Muutokset:
-    - Koodia rivitelty uudestaan
-    - Kommentteja lisätty
+- Koodia rivitelty uudestaan
+- Kommentteja lisätty
+- Div ja class lisätty daycares ympärille
 
-Parannukset:
-    - Hoitopaikan entityn tulostaminen viewssillä
-
-TO DO:
-    - Joka tiedoston uudelleen lukeminen
-    - Divin muutos helppolukuisemmaksi?
-    - Teemaan pieniä muutoksia
+Puutteet:
+- Hoitopaikka entityn tulostaminen viewssillä ei ole mahdollista
