@@ -77,6 +77,18 @@ body {
 }
 
 
+/* OWNKITTENSBLOCK */
+
+#block-citrus-ownkittensblock {
+    text-align: center;
+}
+
+.cat {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
 /* FORMS */
 
 #add-cat-to-daycare-form {
